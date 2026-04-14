@@ -11,10 +11,12 @@
 
 :root {
     --default-font: ;
-    --h1-font-size: ;
-    --h2-font-size: ;
-    --h3-font-size: ;
-    --h4-font-size: ;
+    --font-size-xl: 3em;
+    --font-size-l: 1.5em;
+
+    --button-radius: 0.75em;
+    --button-color: #e8e8e8;
+    --button-outline-color: #000000;
 }
 
 body {
@@ -28,11 +30,88 @@ svg {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+}
+
+button {
+    background: var(--button-color);
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid var(--button-outline-color);
+    border-radius: var(--button-radius);
+    box-shadow: 0.1em 0.1em;
+}
+
+button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+/* ===================================
+   WRAPPER
+   =================================== */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
 /* ===================================
    HEADER
    =================================== */
-
-nav {
+header {
     display: flex;
-    width: 90%;
+    justify-content: space-between;
+    padding: 20px 35px;
+    background-color: hsla(0, 0%, 100%, 0.7);
+}
+
+nav.name {
+    font-size: var(--font-size-xl);
+}
+
+nav.nav-btns {
+    display: flex;
+    align-items: center;
+    padding-right: ;
+}
+
+.nav-btn {
+    margin: 0px 10px;
+}
+
+/* ===================================
+   CONTENT
+   =================================== */
+/* ALL CONTENT */
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HOME PAGE */
+.content .home-logo {
+
+}
+
+a.home-cta {
+    font-size: var(--font-size-xl);
+    padding: 30px 35px;
+    border: solid 1px white;
+    width: fit-content;
+}
+
+p.home-tagline {
+    font-size: var(--font-size-l);
+    width: fit-content;
+    margin-top: 25px;
 }
