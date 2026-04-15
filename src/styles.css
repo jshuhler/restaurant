@@ -20,7 +20,9 @@
 }
 
 body {
-    background-color: rebeccapurple;
+    background-image: url("./img/hd-bg-colorful.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 button,
@@ -106,12 +108,17 @@ nav.nav-btns {
 a.home-cta {
     font-size: var(--font-size-xl);
     padding: 30px 35px;
-    border: solid 1px white;
+    border: none;
     width: fit-content;
+    background-color: rgba(255, 255, 255, 0.65);
 }
 
 p.home-tagline {
-    font-size: var(--font-size-l);
+    font-family: 'Faster One', monospace;
+    font-size: var(--font-size-xl);
+    max-width: 400px;
+    text-align: center;
+    color: whitesmoke;
     width: fit-content;
     margin-top: 25px;
 }
