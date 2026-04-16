@@ -157,7 +157,9 @@ p.menu-title {
     text-shadow: 2px 2px 0px var(--purple-color);
     font-family: var(--button-font);
     font-size: var(--font-size-xl);
+    font-weight: 600;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .menu-card-container {
@@ -170,13 +172,26 @@ p.menu-title {
 }
 
 .menu-card {
-    color: var(--button-font-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.65);
     max-width: 250px;
     min-height: 200px;
+    padding: 10px;
+    box-shadow: 6px 6px 6px var(--purple-color);
+    position: relative;
+    z-index: 1;
 }
 
 .card-title {
     text-shadow: 2px 2px 0px var(--header-color);
+    text-align: center;
+}
+
+.card-description {
+    text-align: center;
 }
 
 .card-price {
