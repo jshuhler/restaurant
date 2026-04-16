@@ -1,4 +1,6 @@
 import "./styles.css";
 import { homePage } from "./home.js";
 
-console.log("Let's eat.");
+const contentSection = document.getElementById('content');
+
+console.log("Let's eat.");  

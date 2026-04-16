@@ -1,5 +1,5 @@
 export const homePage = () => {
-    const contentSection = document.getElementById('content');
+    // const contentSection = document.getElementById('content');
     
     // call to action
     let homeCTA = document.createElement("a");
