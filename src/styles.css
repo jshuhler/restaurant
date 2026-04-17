@@ -48,7 +48,8 @@ body::before {
 button,
 a,
 png,
-svg {
+svg,
+p.email {
     cursor: pointer;
 }
 
@@ -198,6 +199,41 @@ p.menu-title {
     font-style: italic;
 }
 
+    /* ABOUT PAGE */
+.about-container, 
+.about-tile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-container {
+    background-color: hsla(59, 100%, 86%, 0.7);
+    box-shadow: 6px 6px 6px var(--purple-color,0.1);
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    max-width: 400px;
+}
+
+.about-tile {
+    margin: 25px 0px;
+    color: var(--purple-color);
+    text-align: center;
+}
+
+p.title {
+    font-family: var(--button-font);
+    padding-bottom: 5px;
+    font-size: calc(var(--font-size-l) + 0.5em);
+    font-weight: 700;
+}
+
+p.text {
+    font-family: var(--button-font);
+    padding: 4px 20px;
+}
+
 /* ===================================
    FOOTER
    =================================== */
@@ -211,5 +247,9 @@ footer {
 footer svg{
     fill: var(--header-color);
     filter: drop-shadow(2px 2px 0px var(--purple-color));
+}
 
+footer svg:hover {
+    fill: var(--purple-color);
+    filter: drop-shadow(2px 2px 0px var(--header-color));
 }
