@@ -17,15 +17,12 @@
 
     --button-radius: 0.75em;
     --button-color: rgb(232, 232, 232);
-    --button-outline-color: rgb(62, 0, 90);
-
+    --purple-color: rgb(62, 0, 90);
     --header-color: rgb(255, 254, 184);
 
     --title-font: 'Faster One', monospace;
-    --purple-color: rgb(62, 0, 90);
     --button-font: 'Fredoka', monospace;
-    --button-font-color: ;
-    --button-bg-color: ;
+    --serif-font: 'Playfair Display', serif;
 }
 
 body {
@@ -64,7 +61,7 @@ button {
     font-weight: 500;
     font-size: 18px;
     color: var(--purple-color);
-    border: 3px solid var(--button-outline-color);
+    border: 3px solid var(--purple-color);
     border-radius: var(--button-radius);
     box-shadow: 0.1em 0.1em;
 }
@@ -130,7 +127,7 @@ nav.nav-btns {
 
 /* HOME PAGE */
 a.home-cta {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--serif-font);
     font-size: var(--font-size-xl);
     padding: 30px 35px;
     border: none;
@@ -141,7 +138,7 @@ a.home-cta {
 
 p.home-tagline {
     font-family: var(--button-font);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-l);
     color: var(--purple-color);
     max-width: 400px;
     text-align: center;
@@ -223,10 +220,11 @@ p.menu-title {
 }
 
 p.title {
-    font-family: var(--button-font);
+    font-family: var(--serif-font);
     padding-bottom: 5px;
     font-size: calc(var(--font-size-l) + 0.5em);
     font-weight: 700;
+    text-shadow: 2px 2px 0px var(--button-color);
 }
 
 p.text {
