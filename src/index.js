@@ -9,9 +9,6 @@ const aboutBtn = document.getElementById('about-btn');
 const homeCTA = document.querySelector(".home-cta");
 
 const contentSection = document.getElementById('content');
-const homeContainer = document.querySelector(".home-container");
-
-homePage();
 
 homeBtn.addEventListener('click', () => {
     while (contentSection.firstChild) {
@@ -34,11 +31,13 @@ aboutBtn.addEventListener('click', () => {
     aboutPage();
 })
 
-// homeCTA.addEventListener('click', () => {
-//     while (contentSection.firstChild) {
-//         contentSection.removeChild(contentSection.firstChild);
-//     }
-//     aboutPage();
-// });
+homeCTA.addEventListener('click', (e) => {
+    e.preventDefault
+    while (contentSection.firstChild) {
+        contentSection.removeChild(contentSection.firstChild);
+    }
+    aboutPage();
+});
 
+homePage();
 console.log("Let's eat.");

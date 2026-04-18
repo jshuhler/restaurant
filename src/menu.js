@@ -32,7 +32,7 @@ const menu = [
 ];
 
 const contentSection = document.getElementById('content');
-let menuContainer = document.createElement("div");
+const menuContainer = document.createElement("div");
 menuContainer.classList.add("menu-card-container");
 
 const menuItem = function(name,text,price) {
@@ -50,6 +50,7 @@ const menuItem = function(name,text,price) {
     let itemPrice = document.createElement("p");
     itemPrice.classList.add("card-price");
     itemPrice.textContent = price;
+    
     menuCard.appendChild(itemTitle);
     menuCard.appendChild(itemText);
     menuCard.appendChild(itemPrice);
@@ -61,8 +62,6 @@ const menuPage = () => {
     let menuTitle = document.createElement("p");
     menuTitle.classList.add("menu-title");
     menuTitle.textContent = "Our Current Weiner Offerings";
-    // menu container
-
     // menu items
     for (let i = 0; i < menu.length; i++) {
         menuItem(menu[i].name, menu[i].text, menu[i].price)

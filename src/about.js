@@ -1,7 +1,7 @@
 const faq = [
     {
         title: "Who we are",
-        text: "Certainly not a giant sentient hotdog selling its smaller breathren to be eaten.",
+        text: "Certainly not a giant sentient hotdog selling its smaller, weaker breathren to be eaten.",
     },
     {
         title: "Location",
@@ -9,36 +9,41 @@ const faq = [
     },
     {
         title: "Reservations",
-        text: "givemehotdogs@ilovehot.dogs",
+        text: "(555) 438-3647",
     },
     {
         title: "Hours",
         text: "Open 24/7 (except Mondays and Wednesdays)",
     },
-]
+];
+
 const contentSection = document.getElementById('content');
+const aboutContainer = document.createElement("div");
+aboutContainer.classList.add("about-container");
+
 const aboutItem = function(title,text) {
     let aboutTile = document.createElement("div");
-        aboutTile.classList.add("about-tile");
+    aboutTile.classList.add("about-tile");
+
     let aboutTitle = document.createElement("p");
-        aboutTitle.classList.add("title");
-        aboutTitle.textContent = title;
+    aboutTitle.classList.add("title");
+    aboutTitle.textContent = title;
+    aboutTile.appendChild(aboutTitle);
+    
     let aboutText = document.createElement("p");
-        aboutText.classList.add("text");
-        aboutText.textContent = text;
+    aboutText.classList.add("text");
+    aboutText.textContent = text;
+    aboutTile.appendChild(aboutText);
+
+    aboutContainer.appendChild(aboutTile);
 };
 
 const aboutPage = () => {
-    // about container
-    let aboutContainer = document.createElement("div");
-    aboutContainer.classList.add("about-container");
-    // about items
-
+    for (let i = 0; i < faq.length; i++) {
+        aboutItem(faq[i].title, faq[i].text)
+    };
 
     contentSection.appendChild(aboutContainer);
-    aboutContainer.appendChild(aboutTile);
-    aboutTile.appendChild(aboutTitle);
-    aboutTile.appendChild(aboutText);
 };
 
 export { aboutPage };

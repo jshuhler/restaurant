@@ -5,7 +5,7 @@ const homePage = () => {
 
     let homeCTA = document.createElement("a");
     homeCTA.classList.add("home-cta");
-    homeCTA.setAttribute("href",""); // add event listener for this to direct to ABOUT tab 
+    // homeCTA.setAttribute("href",""); // add event listener for this to direct to ABOUT tab 
     homeCTA.setAttribute("target","_blank");
     homeCTA.setAttribute("rel","noreferrer");
     homeCTA.textContent = "Book a Table";
