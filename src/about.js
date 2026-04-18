@@ -1,3 +1,21 @@
+const faq = [
+    {
+        title: "Who we are",
+        text: "Certainly not a giant sentient hotdog selling its smaller breathren to be eaten.",
+    },
+    {
+        title: "Location",
+        text: "You'll find us when you're ready.",
+    },
+    {
+        title: "Reservations",
+        text: "givemehotdogs@ilovehot.dogs",
+    },
+    {
+        title: "Hours",
+        text: "Open 24/7 (except Mondays and Wednesdays)",
+    },
+]
 const contentSection = document.getElementById('content');
 const aboutItem = function(title,text) {
     let aboutTile = document.createElement("div");
@@ -10,18 +28,17 @@ const aboutItem = function(title,text) {
         aboutText.textContent = text;
 };
 
-export const aboutPage = () => {
+const aboutPage = () => {
     // about container
     let aboutContainer = document.createElement("div");
     aboutContainer.classList.add("about-container");
     // about items
-    aboutItem("Who we are","Certainly not a giant sentient hotdog selling its smaller breathren to be eaten.");
-    aboutItem("Location","You'll find us when you're ready.");
-    aboutItem("Reservations","givemehotdogs@ilovehot.dogs");
-    aboutItem("Hours","Open 24/7 (except Wednesdays)");
+
 
     contentSection.appendChild(aboutContainer);
     aboutContainer.appendChild(aboutTile);
     aboutTile.appendChild(aboutTitle);
     aboutTile.appendChild(aboutText);
 };
+
+export { aboutPage };
