@@ -18,10 +18,8 @@ const faq = [
 ];
 
 const contentSection = document.getElementById('content');
-const aboutContainer = document.createElement("div");
-aboutContainer.classList.add("about-container");
 
-const aboutItem = function(title,text) {
+const aboutItem = function(title,text,aboutContainer) {
     let aboutTile = document.createElement("div");
     aboutTile.classList.add("about-tile");
 
@@ -39,10 +37,11 @@ const aboutItem = function(title,text) {
 };
 
 const aboutPage = () => {
+    const aboutContainer = document.createElement("div");
+    aboutContainer.classList.add("about-container");
     for (let i = 0; i < faq.length; i++) {
-        aboutItem(faq[i].title, faq[i].text)
+        aboutItem(faq[i].title, faq[i].text, aboutContainer)
     };
-
     contentSection.appendChild(aboutContainer);
 };
 

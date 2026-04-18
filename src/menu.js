@@ -16,7 +16,7 @@ const menu = [
     },
     {
         name: "The Za",
-        text: "An entire pepperoni, mozzerlla, marinara, on a garlic pizza dough bun",
+        text: "An entire pepperoni, mozz, marinara, on a garlic pizza dough bun",
         price: "$5.99",
     },
     {
@@ -32,10 +32,9 @@ const menu = [
 ];
 
 const contentSection = document.getElementById('content');
-const menuContainer = document.createElement("div");
-menuContainer.classList.add("menu-card-container");
 
-const menuItem = function(name,text,price) {
+
+const menuItem = function(name,text,price,menuContainer) {
     let menuCard = document.createElement("div");    
     menuCard.classList.add("menu-card");
 
@@ -50,7 +49,7 @@ const menuItem = function(name,text,price) {
     let itemPrice = document.createElement("p");
     itemPrice.classList.add("card-price");
     itemPrice.textContent = price;
-    
+
     menuCard.appendChild(itemTitle);
     menuCard.appendChild(itemText);
     menuCard.appendChild(itemPrice);
@@ -58,13 +57,15 @@ const menuItem = function(name,text,price) {
 };
 
 const menuPage = () => {
+    const menuContainer = document.createElement("div");
+    menuContainer.classList.add("menu-card-container");
     // menu title
     let menuTitle = document.createElement("p");
     menuTitle.classList.add("menu-title");
     menuTitle.textContent = "Our Current Weiner Offerings";
     // menu items
     for (let i = 0; i < menu.length; i++) {
-        menuItem(menu[i].name, menu[i].text, menu[i].price)
+        menuItem(menu[i].name, menu[i].text, menu[i].price, menuContainer)
     };
     contentSection.appendChild(menuContainer);
 };

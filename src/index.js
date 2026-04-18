@@ -31,13 +31,5 @@ aboutBtn.addEventListener('click', () => {
     aboutPage();
 })
 
-homeCTA.addEventListener('click', (e) => {
-    e.preventDefault
-    while (contentSection.firstChild) {
-        contentSection.removeChild(contentSection.firstChild);
-    }
-    aboutPage();
-});
-
 homePage();
 console.log("Let's eat.");
