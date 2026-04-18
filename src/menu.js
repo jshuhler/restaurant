@@ -1,3 +1,4 @@
+const contentSection = document.getElementById('content');
 const menuItem = function(name,text,price) {
     let menuCard = document.createElement("div");
     menuCard.classList.add("menu-card");
@@ -10,11 +11,7 @@ const menuItem = function(name,text,price) {
     let itemPrice = document.createElement("p");
     itemPrice.classList.add("card-price");
     itemPrice.textContent = price;
-
-    menuContainer.appendChild(menuCard);
-    menuCard.appendChild(itemTitle);
-    menuCard.appendChild(itemText);
-    menuCard.appendChild(itemPrice);
+    return { menuCard, itemTitle, itemText, itemPrice }
 }
 
 export const menuPage = () => {
@@ -32,5 +29,11 @@ export const menuPage = () => {
     menuItem("The Za","An entire pepperoni, mozzerlla, marinara, on a garlic pizza dough bun","$6.99");
     menuItem("The Forest Floor","Mushroom dog, arugula, truffle aioli, dirt sauce on a gluten free, vegan bun","$0.99");
     menuItem("The Philly Special","Shaved beef dog, whiz, grilled onions on a sesame seed bun","$41.33");
+
+    contentSection.appendChild(menuContainer);
+    menuContainer.appendChild(menuCard);
+    menuCard.appendChild(itemTitle);
+    menuCard.appendChild(itemText);
+    menuCard.appendChild(itemPrice);
 }
 
